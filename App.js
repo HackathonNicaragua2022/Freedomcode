@@ -1,10 +1,10 @@
 import { StyleSheet, View, StatusBar } from "react-native";
-import LoginScreen from "./src/screens/LoginScreen";
+import IMCalculator from "./src/screens/IMCalculator";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <LoginScreen />
+      <IMCalculator />
     </View>
   );
 }
