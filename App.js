@@ -1,10 +1,10 @@
-import { StyleSheet, View, StatusBar } from "react-native";
-import IMCalculator from "./src/screens/IMCalculator";
+import { StyleSheet, View, StatusBar, ScrollView } from "react-native";
+import HomeScreen from "./src/screens/HomeScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <IMCalculator />
+      <HomeScreen />
     </View>
   );
 }

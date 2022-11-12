@@ -33,7 +33,7 @@ const LoginScreen = () => {
             }}
             containerStyle={{ paddingHorizontal: 6 }}
             buttonStyle={{ borderRadius: 10, height: 50 }}
-            titleStyle={{ fontSize: 20 }}
+            titleStyle={{ fontSize: 24 }}
           >
             Login
           </Button>
