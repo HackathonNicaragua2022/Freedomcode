@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
-export default function soplos() {
+export default function Soplos() {
     return (
 
         <View>
