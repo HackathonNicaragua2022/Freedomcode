@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList, Image } from "react-native";
+import { StyleSheet, View, FlatList, Image } from "react-native";
 import React from "react";
 import { TouchableOpacity } from "react-native";
 
@@ -22,9 +22,11 @@ const Data = [
 ];
 
 const ImageCard = ({ image }) => (
-  <TouchableOpacity style={styles.ImageContainer}>
-    <Image source={image} style={styles.image} />
-  </TouchableOpacity>
+  <View>
+    <TouchableOpacity style={styles.ImageContainer}>
+      <Image source={image} style={styles.image} />
+    </TouchableOpacity>
+  </View>
 );
 
 const ListCard = () => {
@@ -34,7 +36,7 @@ const ListCard = () => {
       <FlatList
         numColumns={2}
         data={Data}
-        contentContainerStyle={{ margin: 20 }}
+        contentContainerStyle={{ flex: 1 }}
         renderItem={renderItem}
         keyExtractor={(item) => item.id}
       />

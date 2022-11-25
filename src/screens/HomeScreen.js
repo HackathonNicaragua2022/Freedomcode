@@ -27,7 +27,7 @@ const HomeScreen = () => {
         >
           Iniciar Examen
         </Button>
-        <ListCard></ListCard>
+        <ListCard />
       </View>
     </View>
   );
