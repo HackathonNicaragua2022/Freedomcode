@@ -11,7 +11,6 @@ const Btn = ({ bgColor, btnLabel, textColor, Press }) => {
         alignItems: "center",
         width: 350,
         paddingVertical: 5,
-        right: 10,
         marginVertical: 10,
       }}
     >

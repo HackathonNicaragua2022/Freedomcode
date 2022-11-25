@@ -12,18 +12,20 @@ const WelcomeScreen = (props) => {
         <Text style={{ color: "white", fontSize: 64, marginBottom: 40 }}>
           Coding
         </Text>
-        <Btn
-          bgColor={colors.darkaqua}
-          textColor="white"
-          btnLabel="Login"
-          Press={() => props.navigation.navigate("Login")}
-        />
-        <Btn
-          bgColor="white"
-          textColor={colors.darkaqua}
-          btnLabel="Signup"
-          Press={() => props.navigation.navigate("Signup")}
-        />
+        <View style={{ marginLeft: -10 }}>
+          <Btn
+            bgColor={colors.darkaqua}
+            textColor="white"
+            btnLabel="Login"
+            Press={() => props.navigation.navigate("Login")}
+          />
+          <Btn
+            bgColor="white"
+            textColor={colors.darkaqua}
+            btnLabel="Signup"
+            Press={() => props.navigation.navigate("Signup")}
+          />
+        </View>
       </View>
     </Background>
   );
