@@ -1,12 +1,10 @@
-import { StyleSheet, View } from "react-native";
-import { Text } from "@rneui/themed";
+import { StyleSheet, View} from "react-native";
+import Obs from "./exams/antecedent"
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text h1 h1Style={{ fontSize: 24 }}>
-        Hello World!
-      </Text>
+    <View style={styles.container} >
+      <Obs></Obs>
     </View>
   );
 }
@@ -14,8 +12,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
