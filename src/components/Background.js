@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 import React from "react";
 import { ImageBackground } from "react-native";
 
@@ -7,7 +7,7 @@ const Background = ({ children }) => {
     <View>
       <ImageBackground
         source={require("../assets/patron.jpg")}
-        style={{ height: "100%" }}
+        style={{ height: "100%", width: "100%" }}
       />
       <View style={{ position: "absolute" }}>{children}</View>
     </View>

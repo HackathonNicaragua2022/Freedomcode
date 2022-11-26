@@ -11,19 +11,19 @@ const Login = (props) => {
       <View style={{ alignItems: "center", width: 400 }}>
         <Text
           style={{
-            color: "white",
-            fontSize: 64,
+            color: "#153c4e",
+            fontSize: 50,
             fontWeight: "bold",
             marginVertical: 10,
           }}
         >
-          Login
+          Inicio de Sesión
         </Text>
         <View
           style={{
             backgroundColor: "white",
             paddingTop: 100,
-            height: 700,
+            height: "100%",
             width: 460,
             borderTopLeftRadius: 130,
             alignItems: "center",
@@ -32,7 +32,7 @@ const Login = (props) => {
           <Text
             style={{ fontSize: 40, color: colors.aqua, fontWeight: "bold" }}
           >
-            Welcome Back
+            Bienvenido
           </Text>
           <Text
             style={{
@@ -42,22 +42,22 @@ const Login = (props) => {
               marginBottom: 20,
             }}
           >
-            Login to your account
+            Inicia sesion en tu cuenta
           </Text>
-          <Field placeholder="Email/Username" keyboardType={"email-address"} />
-          <Field placeholder="Password" secureTextEntry={true} />
+          <Field placeholder="Correo/Usuario" keyboardType={"email-address"} />
+          <Field placeholder="Contraseña" secureTextEntry={true} />
           <View
             style={{ alignItems: "flex-end", width: "78%", paddingRight: 24 }}
           >
             <Text
               style={{ color: colors.aqua, fontWeight: "bold", fontSize: 16 }}
             >
-              Forgot Password?
+              Olvidaste tu contraseña?
             </Text>
             <View style={{ width: "94%", alignItems: "center" }}>
               <Button
                 onPress={() => alert("Logged in")}
-                title="Login"
+                title="Iniciar Sesion"
                 buttonStyle={{
                   backgroundColor: colors.aqua,
                   borderWidth: 2,
@@ -87,7 +87,7 @@ const Login = (props) => {
                   paddingHorizontal: 9,
                 }}
               >
-                Don't have an account ?
+                No tienes una cuenta ?
               </Text>
               <TouchableOpacity
                 onPress={() => props.navigation.navigate("Signup")}
@@ -99,7 +99,7 @@ const Login = (props) => {
                     fontSize: 16,
                   }}
                 >
-                  Signup
+                  Registrate
                 </Text>
               </TouchableOpacity>
             </View>
