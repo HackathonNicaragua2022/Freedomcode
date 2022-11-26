@@ -3,28 +3,41 @@ import { AntDesign } from "@expo/vector-icons";
 import Textexams from "../src/components/Textexams";
 import Btnexams from "../src/components/Btnexams";
 import Footer from "../src/components/Footer";
-export default function TypExam(props) {
+export default function Cruento(props) {
   return (
     <View>
       <View style={styles.container}>
         <TouchableOpacity
           style={styles.arrow}
-          onPress={() => props.navigation.navigate("HomeScreen")}
+          onPress={() => props.navigation.navigate("TypeExamTwo")}
         >
           <AntDesign name="caretleft" size={40} color="black" />
         </TouchableOpacity>
       </View>
       <View style={styles.boxElements}>
         <View style={styles.boxText}>
-          <Textexams title={" ETAPAS DEL EXAMEN"} />
+          <Textexams title={" EXAMEN CRUENTOS E INCRUENTOS "} />
         </View>
         <Btnexams
-          titleButton={"ANAMNESIS"}
-          Pressable={() => props.navigation.navigate("Sexuality")}
+          titleButton={"DOPPLER"}
+          Pressable={() => props.navigation.navigate("ResultExamSelect")}
         />
-        <Btnexams titleButton={"EXAMEN CRUENTO E INCRUENTO"} />
-        <Btnexams titleButton={"EXPLORACION"} />
-        <Btnexams titleButton={" RESULTADOS"} />
+        <Btnexams
+          titleButton={"PLETISMOGRAFIA"}
+          Pressable={() => props.navigation.navigate("ResultExamSelect")}
+        />
+        <Btnexams
+          titleButton={"PRESION TRANSCUTANEA"}
+          Pressable={() => props.navigation.navigate("ResultExamSelect")}
+        />
+        <Btnexams
+          titleButton={"ANGIOGRAFIA"}
+          Pressable={() => props.navigation.navigate("ResultExamSelect")}
+        />
+        <Btnexams
+          titleButton={"NO POSEE NINGUNO"}
+          Pressable={() => props.navigation.navigate("ResultExamSelect")}
+        />
         <Footer />
       </View>
     </View>

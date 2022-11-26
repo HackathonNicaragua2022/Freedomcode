@@ -3,13 +3,16 @@ import { AntDesign } from "@expo/vector-icons";
 import Textexams from "../src/components/Textexams";
 import Btnexams from "../src/components/Btnexams";
 import Footer from "../src/components/Footer";
-export default function Claudication() {
+export default function Claudication(props) {
   return (
     <View>
       <View style={styles.container}>
-        <View style={styles.arrow}>
+        <TouchableOpacity
+          style={styles.arrow}
+          onPress={() => props.navigation.navigate("Afected")}
+        >
           <AntDesign name="caretleft" size={40} color="black" />
-        </View>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.boxElements}>
@@ -17,9 +20,18 @@ export default function Claudication() {
           <Textexams title={"CLAUDICACIÓN INTERMITENTE"} />
         </View>
 
-        <Btnexams titleButton={"AUSENTE"} />
-        <Btnexams titleButton={"BAJA"} />
-        <Btnexams titleButton={"ALTA"} />
+        <Btnexams
+          titleButton={"AUSENTE"}
+          Pressable={() => props.navigation.navigate("Reponse")}
+        />
+        <Btnexams
+          titleButton={"BAJA"}
+          Pressable={() => props.navigation.navigate("Reponse")}
+        />
+        <Btnexams
+          titleButton={"ALTA"}
+          Pressable={() => props.navigation.navigate("Reponse")}
+        />
         <Footer />
       </View>
     </View>

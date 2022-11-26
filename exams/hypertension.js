@@ -3,20 +3,29 @@ import { AntDesign } from "@expo/vector-icons";
 import Textexams from "../src/components/Textexams";
 import Btnexams from "../src/components/Btnexams";
 import Footer from "../src/components/Footer";
-export default function Hypertension() {
+export default function Hypertension(props) {
   return (
     <View>
       <View style={styles.container}>
-        <View style={styles.arrow}>
+        <TouchableOpacity
+          style={styles.arrow}
+          onPress={() => props.navigation.navigate("Obesity")}
+        >
           <AntDesign name="caretleft" size={40} color="black" />
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.boxElements}>
         <View style={styles.boxText}>
           <Textexams title={"¿Padece de hipertensión arterial?"} />
         </View>
-        <Btnexams titleButton={"SI"} />
-        <Btnexams titleButton={"NO"} />
+        <Btnexams
+          titleButton={"SI"}
+          Pressable={() => props.navigation.navigate("Alchol")}
+        />
+        <Btnexams
+          titleButton={"NO"}
+          Pressable={() => props.navigation.navigate("Alchol")}
+        />
         <Footer />
       </View>
     </View>

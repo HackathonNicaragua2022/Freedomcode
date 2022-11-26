@@ -4,7 +4,7 @@ import { Image, Button } from "@rneui/base";
 import { LinearGradient } from "expo-linear-gradient";
 import ListCard from "../components/ListCard";
 
-const HomeScreen = () => {
+const HomeScreen = (props) => {
   return (
     <View>
       <View style={{ alignItems: "center" }}>
@@ -15,6 +15,7 @@ const HomeScreen = () => {
       </View>
       <View style={{ alignItems: "center" }}>
         <Button
+          onPress={() => props.navigation.navigate("TypExam")}
           ViewComponent={LinearGradient}
           linearGradientProps={{
             colors: ["rgba(6,246,222,1)", "#7CB9E8"],

@@ -3,13 +3,16 @@ import { AntDesign } from "@expo/vector-icons";
 import Textexams from "../src/components/Textexams";
 import Btnexams from "../src/components/Btnexams";
 import Footer from "../src/components/Footer";
-export default function Deformation() {
+export default function Deformation(props) {
   return (
     <View>
       <View style={styles.container}>
-        <View style={styles.arrow}>
+        <TouchableOpacity
+          style={styles.arrow}
+          onPress={() => props.navigation.navigate("Pain")}
+        >
           <AntDesign name="caretleft" size={40} color="black" />
-        </View>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.boxElements}>
@@ -17,8 +20,14 @@ export default function Deformation() {
           <Textexams title={"¿Presenta deformación oseas?"} />
         </View>
 
-        <Btnexams titleButton={"SI"} />
-        <Btnexams titleButton={"NO"} />
+        <Btnexams
+          titleButton={"SI"}
+          Pressable={() => props.navigation.navigate("Age")}
+        />
+        <Btnexams
+          titleButton={"NO"}
+          Pressable={() => props.navigation.navigate("Age")}
+        />
         <Footer />
       </View>
     </View>
@@ -26,29 +35,28 @@ export default function Deformation() {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      top: "5%",
-      marginBottom: "5%",
+  container: {
+    top: "5%",
+    marginBottom: "5%",
+  },
+  arrow: {
+    left: "5%",
+    top: "5%",
+  },
+  boxElements: {
+    backgroundColor: "#fff",
+    height: "100%",
+    marginTop: "25%",
+    alignItems: "center",
+    borderTopStartRadius: 40,
+    borderTopEndRadius: 40,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
     },
-    arrow: {
-      left: "5%",
-      top: "5%",
-    },
-    boxElements: {
-      backgroundColor: "#fff",
-      height: "100%",
-      marginTop: "25%",
-      alignItems: "center",
-      borderTopStartRadius: 40,
-      borderTopEndRadius: 40,
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 4,
-      },
-      shadowOpacity: 0.3,
-      shadowRadius: 4.65,
-      elevation: 8,
-    },
-  });
-  
+    shadowOpacity: 0.3,
+    shadowRadius: 4.65,
+    elevation: 8,
+  },
+});

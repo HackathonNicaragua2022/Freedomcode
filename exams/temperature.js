@@ -1,55 +1,61 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
-import Textexams from '../src/components/Textexams';
-import Btnexams from '../src/components/Btnexams';
-import Footer from '../src/components/Footer';
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
+import Textexams from "../src/components/Textexams";
+import Btnexams from "../src/components/Btnexams";
+import Footer from "../src/components/Footer";
 
-export default function Temperature() {
-    return (
-
-        <View>
-        <View style={styles.container}>
-          <View style={styles.arrow}>
-            <AntDesign name="caretleft" size={40} color="black" />
-          </View>
-        </View>
-        <View style={styles.boxElements}>
-          <View style={styles.boxText}>
-            <Textexams title={" TEMPERATURA"} />
-          </View>
-          <Btnexams titleButton={"NORMAL"} />
-          <Btnexams titleButton={"ALTERADA"} />
-          <Footer />
-        </View>
+export default function Temperature(props) {
+  return (
+    <View>
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={styles.arrow}
+          onPress={() => props.navigation.navigate("Venous")}
+        >
+          <AntDesign name="caretleft" size={40} color="black" />
+        </TouchableOpacity>
       </View>
-
-    )
+      <View style={styles.boxElements}>
+        <View style={styles.boxText}>
+          <Textexams title={" TEMPERATURA"} />
+        </View>
+        <Btnexams
+          titleButton={"NORMAL"}
+          Pressable={() => props.navigation.navigate("Nail")}
+        />
+        <Btnexams
+          titleButton={"ALTERADA"}
+          Pressable={() => props.navigation.navigate("Nail")}
+        />
+        <Footer />
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container: {
-      top: "5%",
-      marginBottom: "5%",
+  container: {
+    top: "5%",
+    marginBottom: "5%",
+  },
+  arrow: {
+    left: "5%",
+    top: "5%",
+  },
+  boxElements: {
+    backgroundColor: "#fff",
+    height: "100%",
+    marginTop: "25%",
+    alignItems: "center",
+    borderTopStartRadius: 40,
+    borderTopEndRadius: 40,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
     },
-    arrow: {
-      left: "5%",
-      top: "5%",
-    },
-    boxElements: {
-      backgroundColor: "#fff",
-      height: "100%",
-      marginTop: "25%",
-      alignItems: "center",
-      borderTopStartRadius: 40,
-      borderTopEndRadius: 40,
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 4,
-      },
-      shadowOpacity: 0.3,
-      shadowRadius: 4.65,
-      elevation: 8,
-    },
-  });
-  
+    shadowOpacity: 0.3,
+    shadowRadius: 4.65,
+    elevation: 8,
+  },
+});

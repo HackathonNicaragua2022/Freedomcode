@@ -3,18 +3,27 @@ import { AntDesign } from "@expo/vector-icons";
 import Textexams from "../src/components/Textexams";
 import Btnexams from "../src/components/Btnexams";
 import Footer from "../src/components/Footer";
-export default function Afected() {
+export default function Afected(props) {
   return (
     <View>
       <View style={styles.container}>
-        <View style={styles.arrow}>
+        <TouchableOpacity
+          style={styles.arrow}
+          onPress={() => props.navigation.navigate("ResultExamSelect")}
+        >
           <AntDesign name="caretleft" size={40} color="black" />
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.boxElements}>
         <Textexams title={"Zonas Afectadas"} />
-        <Btnexams titleButton={"Uña"} />
-        <Btnexams titleButton={"Varias"} />
+        <Btnexams
+          titleButton={"Uña"}
+          Pressable={() => props.navigation.navigate("Claudication")}
+        />
+        <Btnexams
+          titleButton={"Varias"}
+          Pressable={() => props.navigation.navigate("Claudication")}
+        />
         <Footer />
       </View>
     </View>
@@ -45,5 +54,5 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 4.65,
     elevation: 8,
-  }
+  },
 });
