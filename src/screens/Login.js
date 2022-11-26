@@ -56,7 +56,7 @@ const Login = (props) => {
             </Text>
             <View style={{ width: "94%", alignItems: "center" }}>
               <Button
-                onPress={() => alert("Logged in")}
+                onPress={() => props.navigation.navigate("HomeScreen")}
                 title="Iniciar Sesion"
                 buttonStyle={{
                   backgroundColor: colors.aqua,
