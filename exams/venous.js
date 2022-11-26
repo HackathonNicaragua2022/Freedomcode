@@ -5,55 +5,27 @@ import Btnexams from '../src/components/Btnexams';
 import Footer from '../src/components/Footer';
 export default function Venous() {
     return (
+
         <View>
-            <View style={styles.container}>
-                <View style={styles.arrow}>
-                    <AntDesign name="caretleft" size={40} color="black" />
-                </View>
-            </View>
-            //utilizamos la libreria de AntDesign para conseguir el icono de una flecha
-            posteriormente modificamos su tamaño en size
-
-            <View style={styles.boxElements}>
-                <View style={styles.boxText}>
-                    <Text style={styles.text1}>
-                        LLENADO VENOSO
-                    </Text>
-                </View>
-
-            //creamos un contenedor dentro de otro para guarda el estilo y el texto
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        MENOR A 20 SEGUNDOS
-                    </Text>
-                </TouchableOpacity>
-
-            //creamos otro contenerdor en el mismo y usamos TouchableOpacity, para
-            cuando el usuario toque una opcion esta haga una pequeña animación de 
-            opacidad y seguimos estos mismos pasos hasta llegar a copyright
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        MAYOR A 20 SEGUNDOS
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.copyright}>
-                    <AntDesign name="copyright" size={18} color="black" />
-                    <Text>
-                        Copyright FreedomCode
-                    </Text>
-                </TouchableOpacity>
-            </View>
+        <View style={styles.container}>
+          <View style={styles.arrow}>
+            <AntDesign name="caretleft" size={40} color="black" />
+          </View>
         </View>
-
-
+        <View style={styles.boxElements}>
+          <View style={styles.boxText}>
+            <Textexams title={" LLENADO VENOSO"} />
+          </View>
+          <Btnexams titleButton={"MENOR A 20 SEGUNDOS"} />
+          <Btnexams titleButton={"MAYOR A 20 SEGUNDOS"} />
+          <Footer />
+        </View>
+      </View>
     )
 }
 
 const styles = StyleSheet.create({
-    stycolor: {
+    boxs: {
         backgroundColor: '#03FFC6',
         top: '5%',
         height: '8%',
@@ -77,7 +49,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '45%',
-        top: '90%',
+        top: '45%',
     },
     container: {
         top: '5%',

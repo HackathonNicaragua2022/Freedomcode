@@ -18,6 +18,8 @@ import Sexuality from "./exams/Sexuality";
 import Shoes from "./exams/Shoes";
 import Soplos from "./exams/Soplos";
 import Temperature from "./exams/Temperature";
+import Tobacco from "./exams/Tobacco";
+import Venous from "./exams/Venous";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +28,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={WelcomeScreen} />
-        <Stack.Screen name="Login" component={Temperature} />
+        <Stack.Screen name="Login" component={Scale} />
         <Stack.Screen name="Signup" component={Signup} />
       </Stack.Navigator>
     </NavigationContainer>

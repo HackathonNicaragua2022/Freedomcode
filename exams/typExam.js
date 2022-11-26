@@ -7,53 +7,24 @@ export default function TypExam() {
     return (
 
         <View>
-            <View style={styles.container}>
-                <View style={styles.arrow}>
-                    <AntDesign name="caretleft" size={40} color="black" />
-                </View>
-            </View>
-
-            <View style={styles.boxElements}>
-                <View style={styles.boxText}>
-                    <Text style={styles.text1}>
-                        ETAPAS DEL EXAMEN
-                    </Text>
-                </View>
-
-                <TouchableOpacity style={styles.boxs}>
-                    <Text style={styles.examText}>
-                        ANAMNESIS
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.boxs}>
-                    <Text style={styles.examText}>
-                        EXAMEN CRUENTO E INCRUENTO
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.boxs}>
-                    <Text style={styles.examText}>
-                        EXPLORACION
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.boxs}>
-                    <Text style={styles.examText}>
-                        RESULTADOS
-                    </Text>
-                </TouchableOpacity>
-                
-                <TouchableOpacity style={styles.copyright}>
-                    <AntDesign name="copyright" size={18} color="black" />
-                    <Text>
-                        Copyright FreedomCode
-                    </Text>
-                </TouchableOpacity>
-            </View>
+        <View style={styles.container}>
+          <View style={styles.arrow}>
+            <AntDesign name="caretleft" size={40} color="black" />
+          </View>
         </View>
+        <View style={styles.boxElements}>
+          <View style={styles.boxText}>
+            <Textexams title={" ETAPAS DEL EXAMEN"} />
+          </View>
+          <Btnexams titleButton={"ANAMNESIS"} />
+          <Btnexams titleButton={"EXAMEN CRUENTO E INCRUENTO"} />
+          <Btnexams titleButton={"EXPLORACION"} />
+          <Btnexams titleButton={" RESULTADOS"} />
+          <Footer />
+        </View>
+      </View>
 
-
+    
     )
 }
 
