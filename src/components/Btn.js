@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import React from "react";
 
 const Btn = ({ bgColor, btnLabel, textColor, Press }) => {
@@ -11,7 +11,6 @@ const Btn = ({ bgColor, btnLabel, textColor, Press }) => {
         alignItems: "center",
         width: 350,
         paddingVertical: 5,
-        right: 10,
         marginVertical: 10,
       }}
     >
