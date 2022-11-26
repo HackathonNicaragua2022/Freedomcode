@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-
+import Textexams from '../src/components/Textexams';
+import Btnexams from '../src/components/Btnexams';
+import Footer from '../src/components/Footer';
 export default function TypExam() {
     return (
 

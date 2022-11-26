@@ -1,45 +1,25 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-
+import Textexams from '../src/components/Textexams';
+import Btnexams from '../src/components/Btnexams';
+import Footer from '../src/components/Footer';
 export default function Tobacco() {
     return (
-
         <View>
-            <View style={styles.container}>
-                <View style={styles.arrow}>
-                    <AntDesign name="caretleft" size={40} color="black" />
-                </View>
-            </View>
-
-            <View style={styles.boxElements}>
-                <View style={styles.boxText}>
-                    <Text style={styles.text1}>
-                        ¿Consume tabaco?
-                    </Text>
-                </View>
-                
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        SI
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        NO
-                    </Text>
-                </TouchableOpacity>
-               
-                <TouchableOpacity style={styles.copyright}>
-                    <AntDesign name="copyright" size={18} color="black" />
-                    <Text>
-                        Copyright FreedomCode
-                    </Text>
-                </TouchableOpacity>
-            </View>
+        <View style={styles.container}>
+          <View style={styles.arrow}>
+            <AntDesign name="caretleft" size={40} color="black" />
+          </View>
         </View>
-
-
+        <View style={styles.boxElements}>
+          <View style={styles.boxText}>
+            <Textexams title={"¿Consume tabaco?"} />
+          </View>
+          <Btnexams titleButton={"SI"} />
+          <Btnexams titleButton={"NO"} />
+          <Footer />
+        </View>
+      </View>
     )
 }
 

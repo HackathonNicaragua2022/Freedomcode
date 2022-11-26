@@ -1,70 +1,32 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-
+import Textexams from '../src/components/Textexams';
+import Btnexams from '../src/components/Btnexams';
+import Footer from '../src/components/Footer';
 export default function Scale() {
     return (
-
         <View>
-            <View style={styles.container}>
-                <View style={styles.arrow}>
-                    <AntDesign name="caretleft" size={40} color="black" />
-                </View>
-            </View>
-
-            <View style={styles.boxElements}>
-                <View style={styles.boxText}>
-                    <Text style={styles.text1}>
-                        ¿En qué grado de la escala
-                        Wagner-Meggit se encuentra?
-                    </Text>
-                </View>
-                
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        GRADO 0
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        GRADO 1
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        GRADO 2
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        GRADO 3
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        GRADO 4
-                    </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={styles.stycolor}>
-                    <Text style={styles.examText}>
-                        GRADO 5
-                    </Text>
-                </TouchableOpacity>
-               
-                <TouchableOpacity style={styles.copyright}>
-                    <AntDesign name="copyright" size={18} color="black" />
-                    <Text>
-                        Copyright FreedomCode
-                    </Text>
-                </TouchableOpacity>
-            </View>
+        <View style={styles.container}>
+          <View style={styles.arrow}>
+            <AntDesign name="caretleft" size={40} color="black" />
+          </View>
         </View>
+        <View style={styles.boxElements}>
+          <View style={styles.boxText}>
+            <Textexams title={"   ¿En qué grado de la escala Wagner-Meggit se encuentra?"} />
+          </View>
+         
+          <Btnexams titleButton={" GRADO 0"} />
+          <Btnexams titleButton={" GRADO 1"} />
+          <Btnexams titleButton={" GRADO 2"} />
+          <Btnexams titleButton={" GRADO 3"} />
+          <Btnexams titleButton={" GRADO 4"} />
+          <Btnexams titleButton={" GRADO 5"} />
+         
 
-
+          <Footer />
+        </View>
+      </View>
     )
 }
 
